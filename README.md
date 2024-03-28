@@ -24,3 +24,20 @@ res.on('listiner 2',() =>{
 // execute console.log
 console.log('hello')
 }
+
+[+] Nodejs lifecycle
+
+[+] The event loop
+
+[+] express.js
+So what is express and why do we use it? Well I briefly mentioned it, writing all that server side logic is pretty complex,
+just remember what we had to do to parse an incoming request. For extracting the body, we manually had
+to listen to the data event, to the end event and then create a buffer which we in the end converted to a string and this was just one type of data we could get. If we get other kinds of data, like for example we get a file or differently structured data, then we would have to write new logic. Now expressjs helps us with that, it actually doesn't have a built-in way of handling or parsing that data but it makes it easy to install another package that can easily be hooked into our project that will then do the parsing for us and you will see what I mean in a second. We in general don't want to care about all these nitty gritty details, we want to focus on our code that defines our application, so the thing that really sets our application apart from other applications, our unique selling point you could say and we do use a framework for this, for all the heavy lifting. A framework is basically a set of helper functions but also a suite of tools and rules with which we work, so basically we have a clearly defined way or at least some outline on how we should structure our application, our code and how we should work with that framework to write clean code
+and of course, I will teach you all of that for expressjs in this module. So expressjs helps us with that and this is why we will dive into it here.
+
+[+] middleware
+
+[+] next argument
+
+app.use((req, res, next) => {})
+this function you're passing is receiving yet another function here on the next argument and this next argument, basically this function you're receiving here has to be executed to allow the request to travel on to the next middleware.
